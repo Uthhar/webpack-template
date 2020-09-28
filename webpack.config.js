@@ -116,6 +116,7 @@ module.exports = {
       "@scss": path.resolve(__dirname, "src/scss"),
       "@fonts": path.resolve(__dirname, "src/fonts"),
       "@img": path.resolve(__dirname, "src/img"),
+      "@html": path.resolve(__dirname, "src/pages"),
     },
   },
   optimization: optimization(),
@@ -170,6 +171,10 @@ module.exports = {
             publicPath: "img",
           },
         },
+      },
+      {
+        test: /\.html$/,
+        loader: "raw-loader",
       },
     ],
   },
